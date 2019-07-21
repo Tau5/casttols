@@ -56,7 +56,7 @@ def append():
 		line[0] += duration
 		castlines.append(json.dumps(line)+"\n")
 	
-	files[2].writelines("".join(castlines)+"\n")
+	files[2].writelines("".join(castlines))
 	for i, val in enumerate(files):
 		files[i].close()
 	
