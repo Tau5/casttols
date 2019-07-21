@@ -62,8 +62,26 @@ def append():
 	
 	print("Done!")
 
+def help():
+	return print("""
+Cast tools
 
-if (sys.argv[1] == "text"):
-	text()
-if (sys.argv[1] == "append"):
-	append()
+Commands:
+ - help
+ - text [duration] [text] [Output cast]
+ - append [Cast 1] [Cast 2] [Output cast]
+	""")
+
+try:
+	if (sys.argv[1] == "help"):
+		help()
+	elif (sys.argv[1] == "text"):
+		text()
+	elif (sys.argv[1] == "append"):
+		append()
+except IndexError:
+	help()
+
+
+
+
